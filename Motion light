@@ -1,0 +1,9 @@
+from machine import Pin
+
+led = Pin('LED', Pin.OUT)
+
+sensor = machine.Pin(14)
+
+while True:
+    if sensor.value() == 0:
+        led.toggle()
